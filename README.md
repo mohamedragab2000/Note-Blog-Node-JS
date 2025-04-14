@@ -17,9 +17,3 @@ A basic Notes REST API built using **pure Node.js** (no frameworks like Express)
 
 ---
 
-## 📚 API Endpoints
-
-### 🔍 Get All Notes
-```http
-GET /api/notes
-
