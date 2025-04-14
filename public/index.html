@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Node.js Notes App</h1>
+    
+    <!-- Form to add/edit notes -->
+    <div class="form-container">
+      <h2>Add New Note</h2>
+      <form id="noteForm">
+        <div class="controller">
+          <span>Name </span> 
+          <input type="text" name="userName" placeholder="Enter your name" required/> 
+        </div>
+
+        <div class="controller">
+          <span>Email </span> 
+          <input type="email" name="userEmail" placeholder="Enter your email"/> 
+        </div>
+
+        <div class="controller" >
+          <span>Title </span> 
+          <input type="text" name="title" placeholder="Enter thr title of node" required/> 
+        </div>
+        
+
+        <div class="controller c1">
+          <span class="content">Content </span> 
+          <textarea  name = "subject" cols="40" rows="10" placeholder="Enter the Note" required></textarea> 
+        </div>
+        <input type="submit"  name="Add" value ="Add Note"/>
+       
+
+       
+      </form>
+    </div>
+    <hr>
+    
+    <!-- Container to display notes -->
+    <div class="notes-container">
+      <h2>My Notes</h2>
+      <hr>
+      <div id="notesList">
+
+      </div>
+    </div>
+  </div>
+
+  <div id="updateModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">&times;</span>
+      <h3>Update Note</h3>
+      <form id="updateForm">
+        <div>
+          <label for="userName">Name</label>
+          <input type="text" id="userName" name="userName" required />
+        </div>
+        
+        <div>
+          <label for="userEmail">Email</label>
+          <input type="email" id="userEmail" name="userEmail" required />
+        </div>
+        
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+       
+        <div>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+        
+        
+        <input type="hidden" id="noteId" name="noteId" />
+        
+        <button type="submit" id="sendUpdate">Update</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="/public/script.js">
+  </script>
+</body>
+</html>
+
